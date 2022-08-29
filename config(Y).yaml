@@ -1,3 +1,0 @@
-conda_env: 'snakemake-tutorial/caaps_env.yml'
-accession: 'SRR8314964'
-read_no: [1,2]
