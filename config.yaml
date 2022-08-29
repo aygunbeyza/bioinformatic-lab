@@ -1,7 +1,0 @@
-
-
-
-
-conda_env: 'snakemake-tutorial/caaps_env.yml'
-sample: 'DNA1'
-read_no: [1,2]
