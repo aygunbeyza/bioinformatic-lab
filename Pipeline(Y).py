@@ -1,5 +1,5 @@
 
-    configfile : "/Users/beyzaaygun/Desktop/Bioinformatik/snakemake/yusuf/config.yaml"
+    configfile : "config.yaml"
 rule all:
     input:
 
