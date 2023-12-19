@@ -2,7 +2,7 @@
 
 
 
-configfile: "/Users/beyzaaygun/Desktop/Bioinformatik/snakemake/config.yaml"
+configfile: "config.yaml"
 sample= config["sample"]
 
 rule all:
@@ -14,12 +14,12 @@ rule all:
 
 rule bowtie2:
     input:
-        R1="/Users/beyzaaygun/Desktop/Bioinformatik/snakemake/fastq_files.fastq/human_lung/{sample}_1.fastq",
-        R2="/Users/beyzaaygun/Desktop/Bioinformatik/snakemake/fastq_files.fastq/human_lung/{sample}_2.fastq"
+        R1="{sample}_1.fastq",
+        R2="{sample}_2.fastq"
     output:
         "{sample}_bowtie.sam"
     params:
-        index=["/Users/beyzaaygun/Desktop/Bioinformatik/snakemake/index_files/human_dna/GRCh38_noalt_as"]
+        index=["GRCh38_noalt_as"]
     shell:
         "bowtie2 -x {params.index} -1 {input[0]} -2 {input[1]} -S {output}"
 
